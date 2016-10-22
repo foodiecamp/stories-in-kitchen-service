@@ -5,6 +5,7 @@
     <persistence-unit name="recipeRestPersistence" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <class>com.recipe.rest.entity.UserDO</class>
+        <class>com.recipe.rest.entity.RecipeDO</class>
         <exclude-unlisted-classes></exclude-unlisted-classes>
     </persistence-unit>
 </persistence>
