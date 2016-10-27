@@ -39,7 +39,7 @@ public class AuthResource {
             deserializationEnable = DeserializationFeature.UNWRAP_ROOT_VALUE)
     @Path("login")
     @Consumes({MediaType.APPLICATION_FORM_URLENCODED})
-    public User authenticate(@FormParam("username") String username, @FormParam("password") String password) throws Exception {
+    public User authenticate(@QueryParam("username") String username, @QueryParam("password") String password) throws Exception {
         UserDO userDO = userService.findByUsername(username);
         if (userDO == null) {
             throw new WebApplicationException(Response.Status.UNAUTHORIZED);
