@@ -31,6 +31,15 @@ import java.util.Map;
 @Consumes({MediaType.APPLICATION_JSON})
 @Resource
 @Path("ranks")
+//public class RankResource {
+//
+//    @GET
+//    @Produces("text/plain")
+//    public String get() throws Exception {
+//        return "welcome to Recipe! ";
+//    }
+//}
+
 public class RankResource {
     @Autowired
     private RankService rankService;
@@ -39,9 +48,12 @@ public class RankResource {
     @JacksonFeatures(serializationEnable = SerializationFeature.WRAP_ROOT_VALUE,
             deserializationEnable = DeserializationFeature.UNWRAP_ROOT_VALUE)
     @Path("{id}")
+
     public Rank getById(@PathParam("id") Integer id) throws Exception {
         return rankService.findById(id);
     }
+
+
 
     @GET
     public Map<String, List<Rank>> getAll() throws Exception {
@@ -64,6 +76,6 @@ public class RankResource {
 //    @DELETE
 //    @Path("{id}")
 //    public void delete(@PathParam("id") Integer itemId) throws Exception {
-//        recipeService.delete(itemId);
+//        rankService.delete(itemId);
 //    }
 }
