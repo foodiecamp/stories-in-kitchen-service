@@ -6,6 +6,7 @@
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         <class>com.recipe.rest.entity.UserDO</class>
         <class>com.recipe.rest.entity.RecipeDO</class>
+        <!--<class>com.recipe.rest.entity.RankDO</class>-->
         <exclude-unlisted-classes></exclude-unlisted-classes>
     </persistence-unit>
 </persistence>
